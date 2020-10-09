@@ -10,9 +10,12 @@
 {
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name, 
-    new {@required="required"})
+    new {@required="required"})<br><br>
     @Html.LabelFor(model => model.Specialty)
     @Html.TextBoxFor(model => model.Specialty, 
+    new {@required="required"})<br><br>
+    @Html.LabelFor(model => model.DOB)
+    @Html.TextBoxFor(model => model.DOB, 
     new {@required="required"})
 
     <input type="submit" value="Add new Stylist" class="btn btn-info" />
