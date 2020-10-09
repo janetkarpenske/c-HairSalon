@@ -34,3 +34,37 @@ a:hover {
   font-weight: 800;
   text-decoration: none;
 }
+
+
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:rgb(255, 255, 255);
+  background:  rgb(114, 1, 1);
+  padding:10px;
+  height: 60px;
+}
+
+ul#footerList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 12%;
+  overflow: hidden;
+  background-color: rgb(114, 1, 1);
+}
+
+li#footerUl {
+  float: right;
+  list-style: none;
+}
+
+li#footerUl a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
