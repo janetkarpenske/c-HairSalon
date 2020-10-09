@@ -70,6 +70,14 @@ public ActionResult DeleteConfirmed(int id)
     _db.SaveChanges();
     return RedirectToAction("Index");
 }
-
+    [HttpPost] //search functionality
+    public ActionResult Index(string name)
+    {
+      List<Client> model = _db.Clients
+      .Include(clients => clients.Stylist)
+      .Where(x => x.Name.Contains(name)).ToList();      
+      List<Client> SortedList = model.OrderBy(o => o.Name).ToList();
+      return View("Index", SortedList);
+    }
   }
 }

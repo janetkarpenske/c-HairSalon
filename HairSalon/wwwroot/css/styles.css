@@ -18,3 +18,19 @@ li {
   padding: 20px;
   padding-bottom: 500px;
 }
+.btn {
+  background-color: rgb(202, 1, 1);
+  border: none;
+}
+.btn:hover {
+  background-color: rgb(136, 2, 2);
+  border: none;
+}
+a {
+  color: rgb(255, 6, 6);
+}
+a:hover {
+  color: rgb(199, 2, 2);
+  font-weight: 800;
+  text-decoration: none;
+}

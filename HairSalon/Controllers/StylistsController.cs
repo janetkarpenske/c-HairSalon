@@ -68,5 +68,13 @@ public ActionResult DeleteConfirmed(int id)
     _db.SaveChanges();
     return RedirectToAction("Index");
 }
+
+    [HttpPost]
+    public ActionResult Index(string name)
+    {
+      List<Stylist> model = _db.Stylists.Where(x => x.Name.Contains(name)).ToList();
+      List<Stylist> SortedList = model.OrderBy(o => o.Name).ToList();
+      return View("Index", SortedList);
+    }
   }
 }

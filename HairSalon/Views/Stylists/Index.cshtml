@@ -4,7 +4,13 @@
 @using HairSalon.Models;
 @model List<HairSalon.Models.Stylist>;
 <h1>Your Stylists:</h1><br>
-
+<br>
+@using (Html.BeginForm())
+{
+  @Html.Label("Filter Stylists by Name")
+  @Html.TextBox("Name")
+  <input type="submit" value="Search" class="btn btn-info btn-sm"/> //value is the button text
+}<br>
 @if (@Model.Count == 0)
 {
   <h3>You haven't added any stylists yet. Please add a stylist.</h3>
@@ -14,6 +20,7 @@
 {
   <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li><br>
 }
+<br>
 <div class="centerAlign">
 <div class="row">
   <div class="col-md-6">
