@@ -36,7 +36,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id) //Returns page with details on a specific stylist and all of their clients
     {
-      Stylist thisStylist = _db.Stylists.Include(stylist => stylist.Items).FirstOrDefault(stylists => stylists.StylistId == id);
+      Stylist thisStylist = _db.Stylists.Include(stylist => stylist.Clients).FirstOrDefault(stylists => stylists.StylistId == id);
       return View(thisStylist);
     }
 
