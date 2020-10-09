@@ -1,5 +1,6 @@
 body {
   font-family: 'Inconsolata', monospace;
+  background-color: rgb(213, 230, 236);
 }
 h1 {
   text-align: center;
@@ -11,4 +12,9 @@ h1 {
 li {
   list-style-type: lower-roman;
   font-size: 20px;
+}
+.container {
+  background-color: white;
+  padding: 20px;
+  padding-bottom: 500px;
 }

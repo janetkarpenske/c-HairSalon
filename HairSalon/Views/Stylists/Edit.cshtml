@@ -4,7 +4,7 @@
 
 @model HairSalon.Models.Stylist
 
-<h2>Stylist Info Editor</h2>
+<h2 class="centerAlign">Stylist Info Editor</h2>
 
 <h4>Edit info on @Html.DisplayFor(model => model.Name)</h4>
 
@@ -13,7 +13,11 @@
     @Html.HiddenFor(model => model.StylistId) //this is used to store info on the category id??? To be passed in when form is submitted.
 
     @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, 
+    new {@required="required"})
+    @Html.LabelFor(model => model.Specialty)
+    @Html.TextBoxFor(model => model.Specialty, 
+    new {@required="required"})
 
     <input type="submit" value="Save" />
 }
