@@ -1,0 +1,14 @@
+body {
+  font-family: 'Inconsolata', monospace;
+}
+h1 {
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+}
+.centerAlign {
+  text-align: center;
+}
+li {
+  list-style-type: lower-roman;
+  font-size: 20px;
+}
